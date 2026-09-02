@@ -395,11 +395,28 @@ footer {
     .pdf-summary-box {
         padding: 15px;
     }
-    /* --- OCULTAR TEXTOS SECUNDARIOS EN TELÉFONOS --- */
+    /* --- AJUSTES DE ESPACIADO Y LIMPIEZA PARA TELÉFONOS --- */
 @media (max-width: 768px) {
-        .hero-content .subtitle,
-        .hero-content .cta-note {
+    /* 1. Ocultamos los textos secundarios */
+    .hero-content .subtitle,
+    .hero-content .cta-note {
         display: none !important;
-        }
     }
+
+    /* 2. Le damos más espacio debajo al logo */
+    .hero-logo {
+        margin-bottom: 50px !important; 
+    }
+
+    /* 3. Separamos el título del logo y del botón */
+    .hero h1 {
+        margin-bottom: 50px !important;
+        font-size: 2.2em; /* Lo ajustamos un poco para que no abrume la pantalla */
+    }
+
+    /* 4. Le damos un pequeño margen extra arriba al botón */
+    .hero-content .cta-button {
+        margin-top: 10px !important;
+    }
+}
 }
