@@ -1,0 +1,405 @@
+/* Paleta B (Neutral Profesional) - ACTIVADA POR DEFECTO */
+:root {
+    --color-primary: #1F384C; 
+    --color-secondary: #007bff; 
+    --color-accent: #FFC300; 
+    --color-light: #F4F7F9; 
+    --color-dark: #333; 
+    --color-white: #fff;
+}
+
+/* Estilos Generales y Tipografía */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--color-dark);
+    background-color: var(--color-white);
+}
+
+section, header, footer {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: var(--color-primary);
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2em;
+    color: var(--color-primary);
+    margin-bottom: 1em;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--color-accent);
+    margin: 10px auto 0;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+/* 1. Sección Principal (Hero) */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('2.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 30px;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7));
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    color: var(--color-white);
+    font-size: 3.5em;
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-size: 1.4em;
+    margin: 20px 0 30px;
+}
+
+.cta-note {
+    margin-top: 15px;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+/* Estilos de Botones (CTA) */
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.primary {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    border: 2px solid var(--color-secondary);
+}
+
+.primary:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.secondary {
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+    border: 2px solid var(--color-accent);
+}
+
+.secondary:hover {
+    background-color: #e0b400;
+    transform: translateY(-2px);
+}
+
+.large {
+    font-size: 1.2em;
+    padding: 20px 40px;
+}
+
+/* 2. Sección de Beneficios Clave */
+.benefits {
+    background-color: var(--color-light);
+}
+
+.benefits-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.benefit-item {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-item h3 {
+    color: var(--color-primary);
+    margin: 15px 0 10px;
+}
+
+.icon {
+    font-size: 3em;
+    display: block;
+    margin-bottom: 10px;
+    color: var(--color-accent);
+}
+
+/* 3. Sección de Video */
+.video-section {
+    background-color: var(--color-white);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 30px auto 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.video-container iframe,
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+/* 4. Sección de Testimonios */
+.testimonials {
+    background-color: var(--color-light);
+}
+
+.testimonials-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.testimonial-card {
+    background-color: var(--color-white);
+    padding: 30px 20px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--color-accent); 
+}
+
+.testimonial-card h4 {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.stars {
+    margin-top: 15px;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+}
+
+/* 5. Sección del Plan de Capacitación */
+.program-summary {
+    background-color: var(--color-white);
+}
+
+.pdf-summary-box {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: var(--color-light);
+    border-left: 5px solid var(--color-secondary);
+    text-align: left;
+}
+
+.pdf-summary-box h3 {
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+.pdf-summary-box ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.pdf-summary-box ul li {
+    margin-bottom: 8px;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+.pdf-summary-box ul li::before {
+    content: '✅';
+    position: absolute;
+    left: 0;
+}
+
+/* 6. Llamado a la Acción Final */
+.final-cta {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 80px 5%;
+}
+
+.final-cta h2 {
+    color: var(--color-white);
+}
+
+.final-cta h2::after {
+    background: var(--color-accent);
+}
+
+.final-cta p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* 7. Pie de Página */
+footer {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 20px 5%;
+    font-size: 0.9em;
+}
+
+/* --- ANIMACIONES DE INTERACTIVIDAD (JAVASCRIPT) --- */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- RESPONSIVE DESIGN (Tablets y Celulares) --- */
+@media (max-width: 768px) {
+    .hero {
+        height: 80vh;
+        /* AGREGA ESTA LÍNEA CON TU NUEVA IMAGEN */
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('imagen-movil.jpg') no-repeat center center/cover;
+    }
+    
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .subtitle {
+        font-size: 1.2em;
+    }
+
+    .benefits-grid, .testimonials-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefit-item, .testimonial-card {
+        width: 90%;
+    }
+    
+    .cta-button.large {
+        font-size: 1em;
+        padding: 15px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    section, header, footer {
+        padding: 50px 20px; 
+    }
+
+    .hero-content {
+        padding: 0 10px;
+    }
+    
+    .hero h1 {
+        font-size: 2em; 
+    }
+
+    .subtitle {
+        font-size: 1.1em;
+    }
+
+    .cta-button {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        box-sizing: border-box;
+    }
+
+    .benefit-item, .testimonial-card {
+        width: 100%; 
+        margin: 0 auto;
+    }
+
+    .pdf-summary-box {
+        padding: 15px;
+    }
+    /* --- OCULTAR TEXTOS SECUNDARIOS EN TELÉFONOS --- */
+@media (max-width: 768px) {
+        .hero-content .subtitle,
+        .hero-content .cta-note {
+        display: none !important;
+        }
+    }
+}
